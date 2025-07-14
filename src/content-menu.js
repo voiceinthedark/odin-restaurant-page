@@ -1,6 +1,24 @@
 function createContentMenu() {
   const menuPage = document.createElement('article');
   menuPage.classList.add('menu-page');
+
+  const menuTitle = document.createElement('h2');
+  menuTitle.textContent = 'Menu';
+  menuTitle.classList.add('menu-title');
+  menuPage.appendChild(menuTitle);
+
+  // create a menu item
+  const menuItems = [
+    createMenuItem('Spicy Cheese Burger, House Flavor',
+    'A delicious burger with a spicy cheese patty, topped with fresh lettuce, tomatoes and our special sauce.',
+    8.99, './assets/imgs/462860.jpg'),
+  ];
+
+  for (const item of menuItems){
+    menuPage.appendChild(item);
+  }
+
+  return menuPage;
 }
 
 function createMenuItem(name, description, price, imageUrl){
@@ -35,3 +53,5 @@ function createMenuItem(name, description, price, imageUrl){
   
   return menuItem;
 }
+
+export default createContentMenu;
