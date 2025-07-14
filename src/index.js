@@ -1,7 +1,7 @@
 import './assets/462860.jpg'
 import './styles.css'
 import './content-loader.js';
-import createContentMenu from './content-menu.js';
+import loadContentMenu from './content-menu.js';
 import imgPancake from './assets/imgs/foodiesfeed.com_pouring-honey-on-pancakesk.jpg';
 import imgBurger from './assets/imgs/burger.jpg';
 import imgCheeseCake from './assets/imgs/foodiesfeed.com_refreshing-lemon-cheesecake-slice-with-mint-garnish.jpg';
@@ -35,6 +35,6 @@ const menuItems = [
 ];
 
 const content = document.querySelector('#content');
-const menu = createContentMenu(menuItems);
+const menu = loadContentMenu(menuItems);
 content.appendChild(menu);
 

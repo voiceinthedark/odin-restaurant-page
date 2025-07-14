@@ -1,6 +1,6 @@
 
 
-function createContentMenu(menuItems) {
+function loadContentMenu(menuItems) {
   const menuPage = document.createElement('article');
   menuPage.classList.add('menu-page');
 
@@ -50,4 +50,4 @@ function createMenuItem(name, description, price, imageUrl){
   return menuItem;
 }
 
-export default createContentMenu;
+export default loadContentMenu;

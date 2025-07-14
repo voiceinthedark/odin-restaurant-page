@@ -22,6 +22,7 @@
 
 :root{
   --main-font-color: #e1d155;
+  --height-nav: 80px;
 }
 
 *,
@@ -40,6 +41,30 @@ body {
   font-size: 1rem;
   background-image: url('./assets/462860.jpg');
   background-attachment: fixed;
+  padding-top: var(--height-nav);
+}
+
+.navigation{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: var(--height-nav);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.95);
+
+  button{
+    appearance: none;
+    width: 200px;
+    background-color: transparent;
+    color: var(--main-font-color);
+    border: 1px solid var(--main-font-color);
+    border-radius: 24px;
+    padding: 15px 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }
 
 #content {
