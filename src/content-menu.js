@@ -1,9 +1,6 @@
-import imgPancake from './assets/imgs/foodiesfeed.com_pouring-honey-on-pancakesk.jpg';
-import imgBurger from './assets/imgs/burger.jpg';
-import imgCheeseCake from './assets/imgs/foodiesfeed.com_refreshing-lemon-cheesecake-slice-with-mint-garnish.jpg';
-import imgEggsFried from './assets/imgs/foodiesfeed.com_colorful-veggie-bowl-with-eggs-and-fresh-corn.png';
 
-function createContentMenu() {
+
+function createContentMenu(menuItems) {
   const menuPage = document.createElement('article');
   menuPage.classList.add('menu-page');
 
@@ -12,24 +9,9 @@ function createContentMenu() {
   menuTitle.classList.add('menu-title');
   menuPage.appendChild(menuTitle);
   
-  
-
-  // create a menu item
-  const menuItems = [
-    createMenuItem('Spicy Cheese Burger, House Flavor',
-    'A delicious burger with a spicy cheese patty, topped with fresh lettuce, tomatoes and our special sauce.',
-    8.99, imgBurger),
-    createMenuItem('Honeyed Pancake with blueberries', 
-    'A tasty pancake with honeyed toppings and blueberries on top, creamy on the inside',
-    13.75, imgPancake),
-    createMenuItem('House Cheese Cake!', 'Cheese Odin flavor, creamy and tasty inside out',
-    7.55, imgCheeseCake),
-    createMenuItem('Odin\'s Veggies fried Eggs, house roll', 'Breakfast special, healthy and delicious.',
-    5.89, imgEggsFried),
-  ];
-
   for (const item of menuItems){
-    menuPage.appendChild(item);
+    const element = createMenuItem(item.title, item.description, item.price, item.imageUrl);
+    menuPage.appendChild(element);
   }
 
   return menuPage;
