@@ -2,7 +2,7 @@
   font-family: 'lovelight';
   src: url('./assets/fonts/LoveLight-Regular.ttf') format('truetype');
   font-style: normal;
-  font-weight: 200 900;
+  font-weight: 200..900;
 }
 
 @font-face {
@@ -10,14 +10,18 @@
   src: url('./assets/fonts//Roboto-VariableFont_wdth\,wght.ttf') format('truetype'),
     url('./assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
   font-style: normal;
-  font-weight: 100 900;
+  font-weight: 100..900;
 }
 
 @font-face {
   font-family: 'Indie Flower';
   src: url('./assets/fonts/IndieFlower-Regular.ttf') format('truetype');
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200..900;
+}
+
+:root{
+  --main-font-color: #e1d155;
 }
 
 *,
@@ -32,9 +36,10 @@
 
 body {
   font-family: 'lovelight', sans-serif;
-  color: #fff;
+  color: var(--main-font-color);
   font-size: 1rem;
   background-image: url('./assets/462860.jpg');
+  background-attachment: fixed;
 }
 
 #content {
@@ -51,6 +56,7 @@ body {
   h1 {
     /* line-height: 1.5rem; */
     font-size: 10.4rem;
+    font-weight: 800;
     text-shadow: 2px 2px 2px black;
     margin-top: 40px;
   }
@@ -63,11 +69,18 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Indie Flower', sans-serif;
+  gap: 80px;
 
   .menu-title {
-    text-align: center;
-    font-size: 3.4rem;
-    font-family: 'Roboto', 'Indie Flower', sans-serif;
+    margin-top: 20px;
+    margin-left: 25%;
+    align-self: flex-start;
+    font-size: 3.8rem;
+    font-family: 'lovelight', sans-serif;
+    text-shadow: 3px 1px 4px #000;
+    background-color: rgb(215 12 32 / 0.75);
+    border-radius: 12px;
+    padding: 20px 40px;
   }
 }
 
@@ -76,9 +89,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-areas: "price container";
-  height: 360px;
+  height: auto;
   width: 60%;
-  background-color: rgb(183 43 33 / 0.7);
+  background-color: rgb(183 43 33 / 0.85);
+  border: 3px solid rgb(48 46 44);
   border-radius: 12px;
   padding: 20px 15px;
 
@@ -94,20 +108,21 @@ body {
     h3 {
       grid-area: title;
       font-size: 2.3rem;
+      font-weight: 900;
     }
 
     .item-description {
       grid-area: description;
       font-size: 1.6rem;
-      line-height: 1.25rem;
+      line-height: 1.75rem;
 
     }
 
     .item-image {
       grid-area: image;
-      height: auto;
+      height: 100%;
       width: 100%;
-      /* background-size: 120px; */
+      background-size: cover;
       border-radius: 5px;
       border: 1px solid #f7222f;
     }
@@ -119,14 +134,17 @@ body {
     top: 0;
     left: -30px;
     align-self: start;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     grid-area: price;
     text-align: center;
-    font-size: 2.3rem;
-    font-weight: 600;
-    color: #e1d155;
+    font-size: 3.3rem;
+    font-weight: 800;
+    color: var(--main-font-color);
+    border: 2px solid #f7f2af;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 20px;
     background-color: #c30f2f;
-    width: 100px;
+    width: 150px;
     transform: rotate(-15deg);
   }
 }
