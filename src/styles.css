@@ -5,6 +5,21 @@
   font-weight: 200 900;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts//Roboto-VariableFont_wdth\,wght.ttf') format('truetype'),
+    url('./assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: 'Indie Flower';
+  src: url('./assets/fonts/IndieFlower-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
 *,
 *::before,
 *::after {
@@ -46,14 +61,26 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  font-family: 'Indie Flower', sans-serif;
+
+  .menu-title {
+    text-align: center;
+    font-size: 3.4rem;
+    font-family: 'Roboto', 'Indie Flower', sans-serif;
+  }
 }
 
 .item-card {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-areas: "price container";
-  height: 400px;
+  height: 360px;
   width: 60%;
+  background-color: rgb(183 43 33 / 0.7);
+  border-radius: 12px;
+  padding: 20px 15px;
 
   .item-container {
     grid-area: container;
@@ -62,30 +89,44 @@ body {
     grid-template-rows: 1fr 3fr;
     grid-template-areas: "image title"
       "image description";
+    gap: 10px;
 
     h3 {
       grid-area: title;
       font-size: 2.3rem;
     }
+
     .item-description {
       grid-area: description;
       font-size: 1.6rem;
       line-height: 1.25rem;
 
     }
+
     .item-image {
       grid-area: image;
-      height: 400px;
+      height: auto;
       width: 100%;
-      background-size: cover;
+      /* background-size: 120px; */
+      border-radius: 5px;
+      border: 1px solid #f7222f;
     }
-    
+
   }
 
-.item-price {
-      grid-area: price;
-      text-align: center;
-      font-size: 2.3rem;
-      font-weight: 600;
-    }
+  .item-price {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    align-self: start;
+    margin-right: 10px;
+    grid-area: price;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #e1d155;
+    background-color: #c30f2f;
+    width: 100px;
+    transform: rotate(-15deg);
+  }
 }

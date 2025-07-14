@@ -1,3 +1,8 @@
+import imgPancake from './assets/imgs/foodiesfeed.com_pouring-honey-on-pancakesk.jpg';
+import imgBurger from './assets/imgs/462860.jpg';
+import imgCheeseCake from './assets/imgs/foodiesfeed.com_refreshing-lemon-cheesecake-slice-with-mint-garnish.jpg';
+import imgEggsFried from './assets/imgs/foodiesfeed.com_colorful-veggie-bowl-with-eggs-and-fresh-corn.png';
+
 function createContentMenu() {
   const menuPage = document.createElement('article');
   menuPage.classList.add('menu-page');
@@ -11,7 +16,7 @@ function createContentMenu() {
   const menuItems = [
     createMenuItem('Spicy Cheese Burger, House Flavor',
     'A delicious burger with a spicy cheese patty, topped with fresh lettuce, tomatoes and our special sauce.',
-    8.99, './assets/imgs/462860.jpg'),
+    8.99, imgBurger),
   ];
 
   for (const item of menuItems){
