@@ -282,5 +282,15 @@ body {
       }
     }
   }
+}
 
+/* HOME TAB */
+.main-content {
+  display: flex;
+  flex-direction: column;
+
+  .main-image{
+    background-size: cover;
+    z-index: -1;
+  }
 }

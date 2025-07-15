@@ -3,6 +3,7 @@ import './styles.css'
 import './content-loader.js';
 import loadContentMenu from './content-menu.js';
 import loadContentContact from './content-contact.js';
+import loadContentHome from './content-home.js';
 import imgRestaurant from './assets/imgs/Main_Nav_Outdoor_Dining_1e32894a-6979-4ccf-89e9-b80a4e4d7838.jpg';
 import imgPancake from './assets/imgs/foodiesfeed.com_pouring-honey-on-pancakesk.jpg';
 import imgBurger from './assets/imgs/burger.jpg';
@@ -72,5 +73,8 @@ const menu = loadContentMenu(menuItems);
 // content.appendChild(menu);
 
 const contact = loadContentContact(contactItems);
-content.appendChild(contact);
+// content.appendChild(contact);
+//
+const home = loadContentHome();
+content.appendChild(home);
 
