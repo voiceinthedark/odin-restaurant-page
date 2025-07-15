@@ -39,11 +39,36 @@ function createContactCard(ctinfo) {
   const infoDesc = document.createElement('p');
   const infoPhone = document.createElement('span');
   const infoMail = document.createElement('span');
+  
+  infoPhone.classList.add('phone');
+  infoMail.classList.add('email');
+
+  infoName.classList.add('info-name');
 
   const infoDescDiv = document.createElement('div');
   infoDescDiv.classList.add('info-description')
 
+  const infoContactDiv = document.createElement('div');
+  infoContactDiv.classList.add('info-contact-info');
+
   infoCard.classList.add('info-card');
+
+  infoImg.src = ctinfo.imgUrl;
+  infoImg.alt = 'Our Employers'
+  infoCard.appendChild(infoImg);
+
+  infoName.textContent = ctinfo.name;
+  infoDesc.textContent = ctinfo.description;
+  infoPhone.textContent = ctinfo.tel;
+  infoMail.textContent = ctinfo.email;
+  infoDescDiv.appendChild(infoName);
+  infoDescDiv.appendChild(infoDesc);
+  infoContactDiv.appendChild(infoPhone);
+  infoContactDiv.appendChild(infoMail);
+  infoDescDiv.appendChild(infoContactDiv);
+
+
+  infoCard.appendChild(infoDescDiv);
 
   return infoCard;
 }

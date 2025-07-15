@@ -8,6 +8,7 @@ import imgPancake from './assets/imgs/foodiesfeed.com_pouring-honey-on-pancakesk
 import imgBurger from './assets/imgs/burger.jpg';
 import imgCheeseCake from './assets/imgs/foodiesfeed.com_refreshing-lemon-cheesecake-slice-with-mint-garnish.jpg';
 import imgEggsFried from './assets/imgs/foodiesfeed.com_colorful-veggie-bowl-with-eggs-and-fresh-corn.png';
+import imgAlberta from './assets/imgs/pexels-divinetechygirl-1181686.jpg';
 
 const menuItems = [
   {
@@ -42,6 +43,7 @@ const contactItems = {
   contacts: [
     {
       name: 'Alberta Jonas',
+      imgUrl: imgAlberta,
       description: 'Alberta, the heart and soul of our Restaurant, the mother that keeps on giving, without hesitation, through her hardwork, our restaurant has become a staple and a landmark of our city.',
       tel: '777-7273112',
       email: 'Alberta@OdinRest.com',
