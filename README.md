@@ -7,3 +7,4 @@
 - [Pexels](https://www.Pexels.com)
 - [Unsplash](https://www.unsplash.com) - Tim Moss Holder
 - [Font Awesome](https://fontawesome.com) - for the glyphs    
+- [Vecteezy](https//www.vecteezy.com)
