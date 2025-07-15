@@ -69,12 +69,32 @@ const contactItems = {
 }
 
 const content = document.querySelector('#content');
-const menu = loadContentMenu(menuItems);
-// content.appendChild(menu);
 
+const homeButton = document.querySelector('.home-button');
+const menuButton = document.querySelector('.menu-button');
+const contactButton = document.querySelector('.contact-button');
+
+homeButton.addEventListener('click', () => {
+  removeAllButFirstChild(content);
+  const home = loadContentHome();
+  content.appendChild(home);
+});
+
+menuButton.addEventListener('click', () => {
+removeAllButFirstChild(content);
+const menu = loadContentMenu(menuItems);
+  content.appendChild(menu);
+});
+
+contactButton.addEventListener('click', () => {
+removeAllButFirstChild(content);
 const contact = loadContentContact(contactItems);
-// content.appendChild(contact);
-//
-const home = loadContentHome();
-content.appendChild(home);
+  content.appendChild(contact);
+});
+
+function removeAllButFirstChild(element){
+  while(element.children.length > 1){
+    element.removeChild(element.children[1]);
+  }
+}
 
